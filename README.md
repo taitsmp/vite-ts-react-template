@@ -13,7 +13,20 @@ pnpm add  react-redux @reduxjs/toolkit
 pnpm add -D @types/react-redux
 pnpm add -D @redux-devtools/extension #maybe not needed?
 ```
-Follow steps here - https://redux-toolkit.js.org/tutorials/typescript
+
+1. Follow steps here - https://redux-toolkit.js.org/tutorials/typescript
+2. Hook up the `Provider` in `index.js`
+
+```
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+)
+```
+
+
 
 #### Redux - preferred locations
 
