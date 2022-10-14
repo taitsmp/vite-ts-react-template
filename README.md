@@ -15,7 +15,7 @@ pnpm add -D @redux-devtools/extension #maybe not needed?
 ```
 
 1. Follow steps here - https://redux-toolkit.js.org/tutorials/typescript
-2. Hook up the `Provider` in `index.js`
+2. Hook up the `Provider` in `src/main.tsx`
 
 ```
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -38,7 +38,7 @@ root.render(
 ##### General stuff
 
 * hooks - `src/hooks.ts`
-* components - `src/components/`
+* components - `src/components`
 * views (or pages) - `src/views` 
 * api - `src/api`
 
