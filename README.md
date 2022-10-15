@@ -11,19 +11,20 @@ Template project with
 ```
 pnpm add  react-redux @reduxjs/toolkit
 pnpm add -D @types/react-redux
-pnpm add -D @redux-devtools/extension #maybe not needed?
+pnpm add @redux-devtools/extension # optional.  Limit this to "dev only" if desired
 ```
 
 1. Follow steps here - https://redux-toolkit.js.org/tutorials/typescript
 2. Hook up the `Provider` in `src/main.tsx`
 
 ```
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <Provider store={store}>
-    <App />
-  </Provider>
-)
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);
 ```
 
 
